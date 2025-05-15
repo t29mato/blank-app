@@ -10,7 +10,7 @@ import streamlit as st
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 
-from src.main import generate_single_graph
+from main import generate_single_graph
 import streamlit.components.v1 as components
 
 def main():
@@ -56,7 +56,7 @@ def main():
     st.bokeh_chart(figure, use_container_width=True)
 
     # 生成HTMLの大画面表示リンクを表示
-    from src.main import main as generate_slideshow_html
+    from main import main as generate_slideshow_html
 
     out_path = generate_slideshow_html(after=after,
                                       before=before,
